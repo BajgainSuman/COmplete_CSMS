@@ -9,6 +9,10 @@
     line-height: 70px;
     padding-left: 30px;
 }
+#errorblock{
+  margin-left: 1000px;
+  color: red;
+}
 a,a:hover
 {
     text-decoration: none;

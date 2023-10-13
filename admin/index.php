@@ -35,7 +35,7 @@
                 <h2>save time for your family.</h2>
                 <h1>we clean for you!</h1>
                 <p>CSMS cleaners is committed to creating a clean and healthy environment for you and your family. In addition to our exceptional routine cleaning, enhanced disinfection services are available for your home to help ensure your family’s wellness.</p>
-                <a href="service.html" class="btn">see our services</a>
+                <a href="service.php" class="btn">see our services</a>
             </div>
             <div class="home-img">
                 <img src="images/header-img.png" alt="">
@@ -93,9 +93,9 @@
                 <h4>follow us</h4>
                 <div class="social-links">
                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sumanbajgain999/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/suman-bajgain-24020024b/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>

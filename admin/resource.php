@@ -1,21 +1,4 @@
 <?php
-if(isset($_GET['error'])){
-    if($_GET['error'] == 1){
-        echo "<script>alert('Empty Project');</script>";
-    }
-    elseif($_GET['error'] == 2){
-        echo "<script>alert('Project Updated');</script>";
-    }
-    elseif($_GET['error'] == 'none'){
-        echo "<script>alert('Project Deleted');</script>";
-    }
-    elseif($_GET['error'] == '3'){
-      echo "<script>alert('Error cannot process');</script>";
-  }
-    else{
-        echo "<script>alert('Project Added');</script>";
-    }
-}
 require "../connection/connection.php";
 session_start();
 if(!empty($_SESSION['adminloginid'])){
@@ -61,14 +44,14 @@ if(!empty($_SESSION['adminloginid'])){
     </div>
     <div class="container">
   <form action="../authen/backendservice.php" method="POST">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-25">
         <label for="sid"> Service ID</label>
       </div>
       <div class="col-75">
         <input type="text" id="sid" name="sid" placeholder="Enter  Service ID">
       </div>
-    </div>
+    </div> -->
 
     <div class="row">
       <div class="col-25">
@@ -94,7 +77,10 @@ if(!empty($_SESSION['adminloginid'])){
           <option value="water tank cleaning">water tank cleaning</option>
           <option value="Kitchen cleaning">Kitchen cleaning</option>
           <option value="painting services">painting services</option>
-          
+          <option value="plumbing services">plumbing service</option>
+          <option value="sofa cleaning services">sofa cleaning services</option>
+          <option value="Floor Parquet Polishing">Floor Parquet Polishing</option>
+
         </select>
       </div>
     </div>
@@ -118,6 +104,27 @@ if(!empty($_SESSION['adminloginid'])){
     </div> -->
     
     <div class="row">
+      <span id="errorblock" style="color:red; padding:0px;">
+        <?php
+      if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "Empty Service";
+    }
+    elseif($_GET['error'] == 2){
+        echo "Service Updated";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "Service Deleted";
+    }
+    elseif($_GET['error'] == '3'){
+      echo "Error cannot process";
+  }
+    else{
+        echo "Service Added";
+    }
+}
+?>
+</span>
       <button type="submit" value="Add" name="add" id="add">Add</button>
     </div>
   </form>

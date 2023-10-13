@@ -44,45 +44,33 @@ if(!empty($_SESSION['adminloginid'])){
         </div>
     </header>
     <section class="booking" id="booking">
-        <form action="../authen/backendbook.php" method="POST">
+        <!-- <span id="error_message"></span> -->
+        <form  action="../authen/backendbook.php" onsubmit="return validation()" method="POST">
+        <div id="error_message"></div>
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="text" id="email" name="email">
             <label for="phone">Phone</label>
             <input type="text" id="phone" name="phone">
             <label for="address">Address</label>
             <input type="text" id="address" name="address"><br>
-            <!-- <label for="service">Cleaning Services:</label>
-          
-            <input type="checkbox" id="services" name="services" value="window cleaning"><br>
-            <label for="service1"> Window cleaning</label>
-            <input type="checkbox" id="services" name="services" value="water tank cleaning"><br>
-            <label for="service2"> Water tank cleaning</label>
-            <input type="checkbox" id="services" name="services" value="Kitchen cleaning"><br>
-            <label for="service3"> Kitchen cleaning</label>
-            <input type="checkbox" id="services" name="services" value="painting services"><br>
-            <label for="service4"> Painting services</label>
-            <input type="checkbox" id="services" name="services" value="sofa cleaning services"><br>
-            <label for="service5"> Sofa cleaning services</label>
-            <input type="checkbox" id="services" name="services" value="Floor Parquet Polishing"><br>
-            <label for="service6"> Floor Parquet Polishing</label><br><br> -->
+           
 
             <div class="row">
         <div class="col-25">
-        <label for="services">Cleaning Services</label><br><br>
-      </div>
-      <!-- <div class="col-75">
-        <input type="text" id="service_type" name="service_type" placeholder="Enter Service Type">
-      </div> -->
-    <!-- </div> -->
-      <div class="col-75">
+        <label for="services">Cleaning Services</label><br>
+      
         <select id="services" name="services">
           <option value="Select">-------Select-------</option>
           <option value="window cleaning" >window cleaning</option>
           <option value="water tank cleaning">water tank cleaning</option>
           <option value="Kitchen cleaning">Kitchen cleaning</option>
           <option value="painting services">painting services</option>
+          <option value="plumbing services">plumbing service</option>
+          <option value="sofa cleaning services">sofa cleaning services</option>
+          <option value="Floor Parquet Polishing">Floor Parquet Polishing</option>
+
           
         </select>
       </div>
@@ -92,8 +80,10 @@ if(!empty($_SESSION['adminloginid'])){
             <input type="date" id="date" name="date">
             <label for="time">Time</label>
             <input type="time" id="time" name="time">
-            <input type="submit" value="Submit" id="submit" name="submit">
+            <input type="submit" onclick="validation()" id="button" name="send" value="Send">
           </form>
+
+
     </section>
     <footer class="footer">
       <div class="container">
@@ -121,10 +111,10 @@ if(!empty($_SESSION['adminloginid'])){
               <div class="footer-col">
                   <h4>follow us</h4>
                   <div class="social-links">
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/sumanbajgain999/"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.linkedin.com/in/suman-bajgain-24020024b/"><i class="fab fa-linkedin-in"></i></a>
                   </div>
               </div>
           </div>
@@ -135,6 +125,8 @@ if(!empty($_SESSION['adminloginid'])){
 else{
     header("location:../admin/booking.php");
 }
+
 ?>
+<script src="main2.js"></script>
 </body>
 </html>

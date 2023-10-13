@@ -1,18 +1,18 @@
 <?php
-if(isset($_GET['error'])){
-    if($_GET['error'] == 1){
-        echo "<script>alert('Empty booking');</script>";
-    }
-    elseif($_GET['error'] == 2){
-        echo "<script>alert('Booking Updated');</script>";
-    }
-    elseif($_GET['error'] == 'none'){
-        echo "<script>alert('Booking Deleted');</script>";
-    }
-    else{
-        echo "<script>alert('Booking Added');</script>";
-    }
-}
+// if(isset($_GET['error'])){
+//     if($_GET['error'] == 1){
+//         echo "<script>alert('Empty booking');</script>";
+//     }
+//     elseif($_GET['error'] == 2){
+//         echo "<script>alert('Booking Updated');</script>";
+//     }
+//     elseif($_GET['error'] == 'none'){
+//         echo "<script>alert('Booking Deleted');</script>";
+//     }
+//     else{
+//         echo "<script>alert('Booking Added');</script>";
+//     }
+// }
 require "../connection/connection.php";
 session_start();
 if(!empty($_SESSION['adminloginid'])){
@@ -56,6 +56,24 @@ if(!empty($_SESSION['adminloginid'])){
     <div class="content1">
     <h1> Booking Services </h1>
     </div>
+    <span id="errorblock" style="color:red; padding:0px;">
+    <?php
+if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "Empty booking";
+    }
+    elseif($_GET['error'] == 2){
+        echo "Booking Updated";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "Booking Deleted";
+    }
+    else{
+        echo "Booking Added";
+    }
+}
+?>
+</span>
     <table class="center" width="50%" cellspacing="7">  
       <tr class="heading">  
            

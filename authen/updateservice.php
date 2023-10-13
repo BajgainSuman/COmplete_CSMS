@@ -85,7 +85,10 @@ if(!isset($_SESSION['adminloginid']))
           <option value="water tank cleaning">water tank cleaning</option>
           <option value="Kitchen cleaning">Kitchen cleaning</option>
           <option value="painting services">painting services</option>
-          
+          <option value="plumbing services">plumbing service</option>
+          <option value="sofa cleaning services">sofa cleaning services</option>
+          <option value="Floor Parquet Polishing">Floor Parquet Polishing</option>
+
         </select>
       </div>
       <div class="row">

@@ -24,7 +24,7 @@ body{
 
 div.login-form{
     width: 450px;
-    background-color: white;
+    background-color: #2198c3;
     box-shadow: 0px 0px 10px black;
     position: absolute;
     left: 500px;
@@ -40,7 +40,7 @@ div.login-form form{
 div.login-form h2{
     text-align: center;
     padding: 12px 0px;
-    background-color: white;
+    background-color: #2198c3;
     color: black;
 }
 
@@ -88,7 +88,7 @@ div.login-form form button:hover{
 }
     /* Style the submit button */
   button[type=submit]{
-    background-color: #162816;
+    background-color:#0f0c0c;
     display: inline-block;
     width: 83px;
     height: 40px;
@@ -122,7 +122,8 @@ div.login-form form button:hover{
 
     if(isset($_POST['login']))
     {
-        $query="SELECT * from `admin_login` WHERE `admin_name`='$_POST[adminname]' AND `admin_password`='$_POST[adminpassword]'";
+       $adminpassword = md5($_POST['adminpassword']); 
+        $query="SELECT * from `admin` WHERE `admin_name`='$_POST[adminname]' AND `admin_password`='$adminpassword'";
         $result=mysqli_query($con,$query);
         if(mysqli_num_rows($result)==1)
         {

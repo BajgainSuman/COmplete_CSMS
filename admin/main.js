@@ -41,7 +41,7 @@ function validate(){
     error_message.style.fontSize = "12px";
     
     var text;
-    if(firstname.length < 5){
+    if(firstname.length <= 1){
       text = "Enter valid First Name";
       error_message.innerHTML = text;
       return false;
@@ -58,13 +58,18 @@ function validate(){
       error_message.innerHTML = text;
       return false;
     }
-    if(email.indexOf("@") == -1 || email.length < 6){
-      text = "Enter valid Email";
+    if(email.indexOf("@") <=0 || email.length <6){
+      text = "Please Enter valid Email";
       error_message.innerHTML = text;
       return false;
     }
-    if(message.length < 10){
-      text = "Enter less than 10 Characters";
+    if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+      text = "Please Enter valid Email";
+      error_message.innerHTML = text;
+      return false;
+    }
+    if(message.length <= 1){
+      text = "Enter at least 10 Characters";
       error_message.innerHTML = text;
       return false;
     }
